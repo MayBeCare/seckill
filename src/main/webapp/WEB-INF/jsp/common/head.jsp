@@ -5,8 +5,10 @@
   Time: 16:26
   To change this template use File | Settings | File Templates.
 --%>
+<!--兼容移动端-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- 引入 Bootstrap -->
+
+<!-- 引入 Bootstrap css样式-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
