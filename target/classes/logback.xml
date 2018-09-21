@@ -8,8 +8,14 @@
         </encoder>
     </appender>
 
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
+
+    <!-- 指定到包 -->
+    <logger name="com.seckill.dao" additivity="false">
+        <level value="debug" />
+        <appender-ref ref="STDOUT" />
+    </logger>
 
 </configuration>
