@@ -137,15 +137,13 @@ public class SeckillServiceImpl implements SeckillService {
             //否则更新了库存，秒杀成功,增加明细
             int insertCount=successKilledDao.insertSuccessKilled(seckillId,userPhone);
             //看是否该明细被重复插入，即用户是否重复秒杀
-            if (insertCount<=0)
-            {
+            if (insertCount<=0){
                 throw new RepeatKillException("seckill repeated");
             }else {
 
                 //减库存,热点商品竞争
                 int updateCount=seckillDao.reduceNumber(seckillId,nowTime);
-                if (updateCount<=0)
-                {
+                if (updateCount<=0){
                     //没有更新库存记录，说明秒杀结束 rollback
                     throw new SeckillCloseException("seckill is closed");
                 }else {
